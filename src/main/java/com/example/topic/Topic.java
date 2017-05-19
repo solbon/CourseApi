@@ -1,10 +1,15 @@
 package com.example.topic;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  * Created by Solbon on 2017-05-11.
  */
+@Entity
 public class Topic {
 
+    @Id
     private String id;
     private String name;
     private String description;
