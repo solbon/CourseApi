@@ -3,7 +3,9 @@ package com.example.course;
 import com.example.topic.Topic;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 /**
  * Created by Solbon on 2017-05-11.
@@ -15,6 +17,7 @@ public class Course {
     private String id;
     private String name;
     private String description;
+    @ManyToOne(fetch = FetchType.EAGER)
     private Topic topic;
 
     public Course() {
